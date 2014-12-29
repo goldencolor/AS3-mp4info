@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<boxes>
+  <!-- 影片头信息 -->
+  <box name="mvhd" comments="moive header">
+    <field name="version" type="" length="1" comments="版本" />
+    <field name="flags" type="" length="3" comments="标志位" />
+    <field name="creation time" type="" length="4" comments="创建时间" />
+    <field name="modification time" type="" length="4" comments="修订时间" />
+    <field name="time scale" type="" length="4" comments="时间量程" />
+    <field name="duration" type="" length="4" comments="影片时长，单位：time scale" />
+    <field name="rate" type="" length="4" comments="播放速度" />
+    <field name="volume" type="" length="2" comments="音量" />
+    <field name="reserved" type="" length="10" comments="保留字段" />
+    <field name="matrix" type="" length="36" comments="矩阵-定义movie中两个坐标空间的映射关系" />
+    <field name="preview time" type="" length="4" comments="开始预览movie的时间，单位：time scale" />
+    <field name="preview duration" type="" length="4" comments="预览时长，单位：time scale" />
+    <field name="poster time" type="" length="4" comments="封面时间?" />
+    <field name="selection time" type="" length="4" comments="选中时间" />
+    <field name="selection duration" type="" length="4" comments="选中时长" />
+    <field name="current time" type="" length="4" comments="当前时间" />
+    <field name="next track id" type="" length="4" comments="下一轨道的ID" />
+  </box>
+  <!-- 轨道头信息 -->
+  <box name="tkhd" comments="track header">
+    <field name="version" type="" length="1" comments="版本" />
+    <field name="flags" type="" length="3" comments="标志位" />
+    <field name="creation time" type="" length="4" comments="创建时间" />
+    <field name="modification time" type="" length="4" comments="修订时间" />
+    <field name="track id" type="" length="4" comments="轨道ID" />
+    <field name="reserved" type="" length="4" comments="保留字段" />
+    <field name="duration" type="" length="4" comments="时长" />
+    <field name="reserved" type="" length="8" comments="保留字段" />
+    <field name="layer" type="" length="2" comments="层" />
+    <field name="alternate group" type="" length="2" comments="" />
+    <field name="volume" type="" length="2" comments="音量" />
+    <field name="reserved" type="" length="2" comments="保留字段" />
+    <field name="matrix" type="" length="36" comments="矩阵" />
+    <field name="track width" type="" length="4" comments="轨道宽度" />
+    <field name="track height" type="" length="4" comments="轨道高度" />
+  </box>
+  <!-- 媒体头信息 -->
+  <box name="mdhd" comments="media header">
+    <field name="version" type="" length="1" comments="版本" />
+    <field name="flags" type="" length="3" comments="标志位" />
+    <field name="creation time" type="" length="4" comments="创建时间" />
+    <field name="modification time" type="" length="4" comments="修订时间" />
+    <field name="time scale" type="" length="4" comments="时间量程" />
+    <field name="duration" type="" length="4" comments="时长" />
+    <field name="language" type="" length="2" comments="语言" />
+    <field name="quality" type="" length="2" comments="质量" />
+  </box>
+  <!-- handler 引用 - 定义了描述此媒体数据的mediahandler component -->
+  <box name="hdrl" comments="handler reference">
+    <field name="version" type="" length="1" comments="版本" />
+    <field name="flags" type="" length="3" comments="标志位" />
+    <field name="component type" type="" length="4" comments="组件类型" />
+    <field name="component subtype" type="" length="4" comments="组件子类型" />
+    <field name="component manufacture" type="" length="1" comments="组件产品" />
+    <field name="component flags" type="" length="1" comments="组件标志位" />
+    <field name="component mask" type="" length="1" comments="组件蒙板" />
+    <field name="component name" type="" length="1" comments="组件名称" />
+  </box>
+  <!-- handler 引用 - 定义了描述此媒体数据的mediahandler component -->
+  <box name="" comments="">
+    <field name="version" type="" length="1" comments="版本" />
+    <field name="flags" type="" length="3" comments="标志位" />
+    <field name="number of entries" type="" length="1" comments="sample descriptions数目" />
+    <field name="sample description size" type="" length="4" comments="sample descriptions尺寸" />
+    <field name="data format" type="" length="4" comments="数据格式" />
+    <field name="reserved" type="" length="6" comments="保留字段" />
+    <field name="data reference index" type="" length="2" comments="数据引用索引" />
+  </box>
+</boxes> 
