@@ -39,3 +39,6 @@ Example
             trace("videoCoding->", mp4.videoCoding);
             trace("audioCoding->", mp4.audioCoding);
         }
+Demo
+-------------
+http://roryluo.info/mp4info/mediaInfo.html
