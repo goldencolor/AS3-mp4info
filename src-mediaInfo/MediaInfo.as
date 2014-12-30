@@ -64,9 +64,9 @@
 		
 		private function onClickBtn(event:MouseEvent):void {
 			trace("MediaInfo->onClickBtn");
-			var filter:FileFilter = new FileFilter("mp4", "*.mp4");
+			//var filter:FileFilter = new FileFilter("mp4", "*.mp4");
 			frVideo = new FileReference();
-			frVideo.browse([filter]);
+			frVideo.browse(/*[filter]*/);
 			if (!frVideo.hasEventListener(Event.SELECT)) 
 			{
 				frVideo.addEventListener(Event.SELECT, onSelectFile);
