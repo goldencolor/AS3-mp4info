@@ -77,14 +77,6 @@ package
 		 */
 		public function Mp4Box(data:ByteArray, parent:Mp4Box = null, root:Mp4Box = null)
 		{	
-//			if (ExternalInterface.available) 
-//			{
-//				ExternalInterface.call("console.log", "Mp4Box");
-//			}
-//			else 
-//			{
-//				trace("Mp4Box");
-//			}
 			this.offset = data.position;
 			// MP4 ROOT
 			if (root == null) 
@@ -246,14 +238,6 @@ package
 		
 		public static function setMetaData(box:Mp4Box):void
 		{
-//			if (ExternalInterface.available) 
-//			{
-//				ExternalInterface.call("console.log", "setMetaData");
-//			}
-//			else 
-//			{
-//				trace("setMetaData");
-//			}
 			if (box.type == Mp4Box.TYPE_ROOT) 
 			{
 				for each (var subBox:Mp4Box in box) 
@@ -303,14 +287,6 @@ package
 		 */
 		public function getChildren():void
 		{
-//			if (ExternalInterface.available) 
-//			{
-//				ExternalInterface.call("console.log", "getChildren");
-//			}
-//			else 
-//			{
-//				trace("getChildren");
-//			}
 			while(data.bytesAvailable > 0)
 			{
 				// box name至少三位必须是英文字符，第四位是英文字符或者00
@@ -323,16 +299,6 @@ package
 				else if (this.type == Mp4Box.TYPE_ROOT)
 				{
 					break;
-//					var offset:uint = 0;
-//					for (var j:int = 0; j < root.children.length; j++) 
-//					{
-//						offset += root.children[j].size;
-//					}
-//					data.position = offset;
-//					if (offset >= root.size) 
-//					{
-//						break;
-//					}
 				}
 				else
 				{
@@ -374,14 +340,6 @@ package
 		 */
 		public function getBoxName(data:ByteArray):String
 		{
-//			if (ExternalInterface.available) 
-//			{
-//				ExternalInterface.call("console.log", "getBoxName");
-//			}
-//			else 
-//			{
-//				trace("getBoxName");
-//			}
 			if (data.length < Mp4Box.H_NAME_LEN + Mp4Box.H_SIZE_LEN)
 			{
 				return "";
