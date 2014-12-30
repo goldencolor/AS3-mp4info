@@ -28,7 +28,7 @@ Example
         // 2.analyse successfully
         if (mp4.isMp4)
         {
-            // 3.let metadata write on foo's attribute
+            // 3.write metadata to mp4 object
             Mp4Box.setMetaData(mp4);
             
             // 4.read them
